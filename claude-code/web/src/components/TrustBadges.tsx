@@ -42,16 +42,16 @@ const badges: Badge[] = [
 
 export function TrustBadges() {
   return (
-    <section className="border-y border-slate-200 bg-white">
+    <section className="border-y border-brand-line bg-brand-surface">
       <div className="mx-auto grid max-w-6xl grid-cols-2 gap-6 px-4 py-8 sm:grid-cols-4 sm:px-6">
         {badges.map((badge) => (
           <div key={badge.value} className="flex items-center gap-3">
-            <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-blue-950 text-blue-200">
+            <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-[3px] bg-brand-navy text-brand-steel-light">
               {badge.icon}
             </div>
             <div>
-              <p className="text-sm font-bold text-slate-900 sm:text-base">{badge.value}</p>
-              <p className="text-xs text-slate-500">{badge.label}</p>
+              <p className="text-sm font-bold text-brand-navy sm:text-base">{badge.value}</p>
+              <p className="text-xs text-neutral-500">{badge.label}</p>
             </div>
           </div>
         ))}

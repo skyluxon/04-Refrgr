@@ -7,10 +7,12 @@ export const company = {
 };
 
 export const contact = {
-  phoneLabel: "전화번호 확인 필요",
-  phoneHref: "",
+  phoneLabel: "031-945-4204~6",
+  phoneHref: "tel:031-945-4204",
   hours: "상담 가능 시간 확인 필요",
-  address: "사업장 주소 확인 필요",
+  address: "경기도 파주시 월롱면 누현1길 130",
+  fax: "031-945-4207",
+  email: "cnh4204@naver.com",
 };
 
 export const industries = [
@@ -22,11 +24,11 @@ export const industries = [
 ];
 
 export const products = [
-  { name: "냉동 쇼케이스", description: "냉동 상품의 보관과 진열을 위한 제품군" },
-  { name: "냉장 쇼케이스", description: "신선식품과 음료 진열을 위한 제품군" },
-  { name: "베이커리 쇼케이스", description: "빵과 디저트 진열을 위한 제품군" },
-  { name: "아이스크림 쇼케이스", description: "아이스크림 보관·판매를 위한 제품군" },
-  { name: "주문형 쇼케이스", description: "설치 환경과 운영 조건을 상담해 제작하는 제품군" },
+  { name: "냉동 쇼케이스", english: "Freezer Showcase", image: "https://www.sekwangcnh.com/img/main/icon_products_01_1.png", description: "냉동 상품의 보관과 진열을 위한 제품군" },
+  { name: "냉장 쇼케이스", english: "Refrigeration Showcase", image: "https://www.sekwangcnh.com/img/main/icon_products_01_2.png", description: "신선식품과 음료 진열을 위한 제품군" },
+  { name: "베이커리 쇼케이스", english: "Bakery Showcase", image: "https://www.sekwangcnh.com/img/main/icon_products_01_4.png", description: "빵과 디저트 진열을 위한 제품군" },
+  { name: "아이스크림 쇼케이스", english: "Ice Cream Showcase", image: "https://www.sekwangcnh.com/img/main/icon_products_01_5.png", description: "아이스크림 보관·판매를 위한 제품군" },
+  { name: "주문형 쇼케이스", english: "Customizing Product", image: "https://www.sekwangcnh.com/img/main/icon_products_01_6.png", description: "설치 환경과 운영 조건을 상담해 제작하는 제품군" },
 ];
 
 export const cases = [

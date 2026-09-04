@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { TrackedLink } from "./TrackedLink";
 
@@ -12,7 +13,7 @@ export function Header() {
   const [open, setOpen] = useState(false);
   return <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur">
     <div className="container-site flex min-h-18 items-center justify-between gap-4">
-      <Link href="/" className="font-black tracking-tight text-[#092a53]">SEKWANG <span className="text-blue-600">C&amp;H</span><span className="block text-[10px] font-semibold tracking-[.12em] text-slate-500">세광시앤에이치</span></Link>
+      <Link href="/" aria-label="세광시앤에이치 홈"><Image src="https://www.sekwangcnh.com/img/svg/logo.svg" alt="세광시앤에이치" width={154} height={40} priority className="h-9 w-auto"/></Link>
       <button className="rounded-lg border border-slate-300 p-2 md:hidden" aria-expanded={open} aria-controls="mobile-nav" aria-label={open ? "메뉴 닫기" : "메뉴 열기"} onClick={() => setOpen(!open)}>
         <span aria-hidden className="block text-xl">{open ? "×" : "☰"}</span>
       </button>

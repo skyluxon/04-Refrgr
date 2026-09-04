@@ -2,25 +2,31 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #131721;
+}
+
+/* 세광시앤에치 실제 홈페이지(sekwangcnh.com) 톤 반영:
+   절제된 다크네이비 + 뮤트 스틸톤, Pretendard 폰트. 채도 높은 원색/네온 글로우 지양. */
+@theme {
+  --color-brand-navy: #131721;
+  --color-brand-navy-2: #1c2130;
+  --color-brand-ink: #0d0f16;
+  --color-brand-steel: #4f7377;
+  --color-brand-steel-light: #94babb;
+  --color-brand-steel-dark: #35595c;
+  --color-brand-surface: #f7f7f7;
+  --color-brand-line: #e2e2e2;
 }
 
 @theme inline {
+  --font-sans: var(--font-pretendard), -apple-system, BlinkMacSystemFont, system-ui,
+    sans-serif;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
 }

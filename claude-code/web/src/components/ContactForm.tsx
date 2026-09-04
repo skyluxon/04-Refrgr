@@ -46,17 +46,17 @@ export function ContactForm() {
 
   if (status === "success") {
     return (
-      <div className="rounded-2xl border border-blue-200 bg-blue-50 p-8 text-center">
-        <p className="text-lg font-semibold text-blue-900">
+      <div className="rounded-[4px] border border-brand-line bg-brand-surface p-8 text-center">
+        <p className="text-lg font-semibold text-brand-navy">
           문의가 접수되었습니다. 감사합니다!
         </p>
-        <p className="mt-2 text-sm text-blue-700">
+        <p className="mt-2 text-sm text-neutral-600">
           담당자가 확인 후 빠르게 연락드리겠습니다.
         </p>
         <button
           type="button"
           onClick={() => setStatus("idle")}
-          className="mt-4 text-sm font-medium text-blue-600 underline underline-offset-2"
+          className="mt-4 text-sm font-medium text-brand-steel-dark underline underline-offset-2"
         >
           다른 문의 남기기
         </button>
@@ -67,7 +67,7 @@ export function ContactForm() {
   return (
     <form onSubmit={handleSubmit} className="space-y-5">
       <div>
-        <label htmlFor="name" className="mb-1.5 block text-sm font-medium text-slate-700">
+        <label htmlFor="name" className="mb-1.5 block text-sm font-medium text-neutral-700">
           이름
         </label>
         <input
@@ -76,12 +76,12 @@ export function ContactForm() {
           type="text"
           required
           placeholder="홍길동"
-          className="w-full rounded-lg border border-slate-300 px-4 py-2.5 text-slate-900 outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+          className="w-full rounded-[3px] border border-brand-line px-4 py-2.5 text-brand-navy outline-none focus:border-brand-steel focus:ring-2 focus:ring-brand-steel-light/30"
         />
       </div>
 
       <div>
-        <label htmlFor="industry" className="mb-1.5 block text-sm font-medium text-slate-700">
+        <label htmlFor="industry" className="mb-1.5 block text-sm font-medium text-neutral-700">
           업종
         </label>
         <select
@@ -89,7 +89,7 @@ export function ContactForm() {
           name="industry"
           required
           defaultValue=""
-          className="w-full rounded-lg border border-slate-300 bg-white px-4 py-2.5 text-slate-900 outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+          className="w-full rounded-[3px] border border-brand-line bg-white px-4 py-2.5 text-brand-navy outline-none focus:border-brand-steel focus:ring-2 focus:ring-brand-steel-light/30"
         >
           <option value="" disabled>
             업종을 선택해주세요
@@ -103,7 +103,7 @@ export function ContactForm() {
       </div>
 
       <div>
-        <label htmlFor="contact" className="mb-1.5 block text-sm font-medium text-slate-700">
+        <label htmlFor="contact" className="mb-1.5 block text-sm font-medium text-neutral-700">
           연락처
         </label>
         <input
@@ -112,12 +112,12 @@ export function ContactForm() {
           type="tel"
           required
           placeholder="010-0000-0000"
-          className="w-full rounded-lg border border-slate-300 px-4 py-2.5 text-slate-900 outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+          className="w-full rounded-[3px] border border-brand-line px-4 py-2.5 text-brand-navy outline-none focus:border-brand-steel focus:ring-2 focus:ring-brand-steel-light/30"
         />
       </div>
 
       <div>
-        <label htmlFor="message" className="mb-1.5 block text-sm font-medium text-slate-700">
+        <label htmlFor="message" className="mb-1.5 block text-sm font-medium text-neutral-700">
           문의 내용
         </label>
         <textarea
@@ -125,7 +125,7 @@ export function ContactForm() {
           name="message"
           rows={4}
           placeholder="매장 규모, 희망 설치일 등 자유롭게 남겨주세요"
-          className="w-full rounded-lg border border-slate-300 px-4 py-2.5 text-slate-900 outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+          className="w-full rounded-[3px] border border-brand-line px-4 py-2.5 text-brand-navy outline-none focus:border-brand-steel focus:ring-2 focus:ring-brand-steel-light/30"
         />
       </div>
 
@@ -134,9 +134,9 @@ export function ContactForm() {
           id="agreed"
           name="agreed"
           type="checkbox"
-          className="mt-1 h-4 w-4 shrink-0 rounded border-slate-300 text-blue-600 focus:ring-blue-500"
+          className="mt-1 h-4 w-4 shrink-0 rounded border-brand-line text-brand-steel-dark focus:ring-brand-steel-light"
         />
-        <label htmlFor="agreed" className="text-sm text-slate-600">
+        <label htmlFor="agreed" className="text-sm text-neutral-600">
           (필수) 상담을 위한 개인정보(이름, 연락처) 수집·이용에 동의합니다.
           수집된 정보는 상담 목적으로만 사용되며, 상담 완료 후 안전하게 파기됩니다.
         </label>
@@ -149,7 +149,7 @@ export function ContactForm() {
       <button
         type="submit"
         disabled={status === "submitting"}
-        className="w-full rounded-full bg-blue-600 px-6 py-3 text-base font-semibold text-white transition hover:bg-blue-500 disabled:cursor-not-allowed disabled:opacity-60"
+        className="w-full rounded-[3px] bg-brand-steel px-6 py-3 text-base font-semibold text-white transition hover:bg-brand-steel-dark disabled:cursor-not-allowed disabled:opacity-60"
       >
         {status === "submitting" ? "제출 중..." : "무료 상담 신청하기"}
       </button>
